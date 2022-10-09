@@ -23,3 +23,11 @@ describe('A year is a leap year if divisible by 400', () => {
         expect(result).toBe(true)
     })
 })
+
+describe('A year is not a leap year if divisible by 100 but not by 400', () => {
+    test('300 is a leap year', () => {
+        const year = 300
+        const result = isLeapYear(year)
+        expect(result).toBe(false)
+    })
+})
